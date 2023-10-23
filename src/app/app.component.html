@@ -1,0 +1,19 @@
+<h1 class="bg bg-info text-center">TO DO LIST IN ANGULAR</h1>
+<br>
+<div class="card" style="width: 25rem; padding: 20px; margin: 10px">
+  <input #task type="text" placeholder="Enter your task here!">
+  <br>
+  <button class= "btn btn-success" (click)="AddTask(task.value); task.value=''">Add task to the List</button>
+<br>
+<span>My tasks
+  <hr>
+  <div *ngFor="let item of tasklist; let i=index">
+  Task {{i+1}} - {{item}}
+  
+  <button class= "btn btn-danger" (click)="DeleteTask(i)">Delete</button>
+  <br>
+  <br>
+  </div>
+</span>
+
+</div>
